@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jelajahi kekayaan budaya, tradisi, dan kuliner unik dari 5 kecamatan di Kabupaten Buleleng, Bali Utara. Eksplorasi budaya lokal yang autentik dan menawan." />
+  <meta name="keywords" content="Buleleng, Bali Utara, Budaya Bali, Kecamatan, Wisata, Tradisi, Singaraja" />
+  <meta property="og:title" content="Eksplorasi Budaya Buleleng – Jelajahi Pesona Bali Utara" />
+  <meta property="og:description" content="Temukan keindahan budaya dan tradisi unik Kabupaten Buleleng, Bali Utara." />
+  <title>Eksplorasi Budaya Buleleng | Jelajahi Pesona Bali Utara</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link href="style.css" rel="stylesheet" />
+
+</head>
+
+<body class="page-load">
+
+  <!-- NAVBAR -->
+  <nav id="mainNav" role="navigation" aria-label="Navigasi utama">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="#hero" class="nav-brand" id="navBrand">
+          <span>Budaya</span> Buleleng
+        </a>
+        <button class="navbar-toggler d-md-none" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="nav d-none d-md-flex align-items-center gap-1" id="navLinks" style="list-style:none; margin:0; padding:0;">
+          <li><a href="#kecamatan" class="nav-link-item">Kecamatan</a></li>
+          <li><a href="#highlights" class="nav-link-item">Eksplorasi</a></li>
+          <li><a href="#game" class="nav-link-item">Mini Game</a></li>
+          <li><a href="#footer" class="nav-link-item">Tentang</a></li>
+          <li>
+            <a href="#game" class="btn-primary-custom ms-2" style="font-size:0.85rem; padding:0.5rem 1.2rem;">
+              <i class="fa-solid fa-gamepad"></i> Main Kuis
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" style="display:none; flex-direction:column; gap:0.3rem; margin-top:1rem; padding:1rem; background:rgba(15,30,20,0.97); border-radius:12px; border: 1px solid rgba(201,168,76,0.2);">
+        <a href="#kecamatan" class="nav-link-item" onclick="closeMobileMenu(event)">Kecamatan</a>
+        <a href="#highlights" class="nav-link-item" onclick="closeMobileMenu(event)">Eksplorasi</a>
+        <a href="#game" class="nav-link-item" onclick="closeMobileMenu(event)">Mini Game</a>
+        <a href="#footer" class="nav-link-item" onclick="closeMobileMenu(event)">Tentang</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" role="banner">
+    <div class="particles-container" id="particles" aria-hidden="true"></div>
+    <div class="hero-ornament hero-ornament-top" aria-hidden="true"></div>
+    <div class="hero-ornament hero-ornament-bottom" aria-hidden="true"></div>
+
+    <div class="hero-content container">
+      <div class="hero-badge">
+        <i class="fa-solid fa-map-pin"></i>
+        Bali Utara &middot; Kabupaten Buleleng
+      </div>
+      <h1 class="hero-title">
+        Jelajahi Pesona<br>
+        <span class="accent">Buleleng</span>
+      </h1>
+      <p class="hero-subtitle">
+        Dari tradisi adat yang sakral hingga kuliner yang otentik &mdash; temukan kekayaan budaya lima kecamatan di jantung Bali Utara yang belum banyak dijelajahi.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#kecamatan" class="btn-primary-custom" id="ctaMainBtn">
+          <i class="fa-solid fa-compass"></i>
+          Mulai Petualangan
+        </a>
+        <a href="#game" class="btn-secondary-custom" id="ctaGameBtn">
+          <i class="fa-solid fa-gamepad"></i>
+          Tebak Budaya
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Gulir ke Bawah</span>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div id="intro-strip" role="complementary" aria-label="Statistik Buleleng">
+    <div class="container">
+      <div class="strip-inner">
+        <div class="strip-stat">
+          <div class="strip-stat-number" data-target="9">0</div>
+          <div class="strip-stat-label">Kecamatan</div>
+        </div>
+        <div class="strip-divider" aria-hidden="true"></div>
+        <div class="strip-stat">
+          <div class="strip-stat-number" data-target="129">0</div>
+          <div class="strip-stat-label">Desa &amp; Kelurahan</div>
+        </div>
+        <div class="strip-divider" aria-hidden="true"></div>
+        <div class="strip-stat">
+          <div class="strip-stat-number" data-target="5" data-suffix="+">0</div>
+          <div class="strip-stat-label">Tradisi Unik Disoroti</div>
+        </div>
+        <div class="strip-divider" aria-hidden="true"></div>
+        <div class="strip-stat">
+          <div class="strip-stat-number" data-target="1">0</div>
+          <div class="strip-stat-label">Kabupaten, Satu Hati</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KECAMATAN SECTION -->
+  <section id="kecamatan" aria-label="Jelajah Kecamatan">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">
+          <i class="fa-solid fa-location-dot"></i>&nbsp; Lima Kecamatan Pilihan &nbsp;<i class="fa-solid fa-location-dot"></i>
+        </div>
+        <h2 class="section-title">Jelajah Kecamatan <br><span style="color:var(--gold-dark);">Buleleng</span></h2>
+        <p class="section-desc">Setiap kecamatan menyimpan cerita, tradisi, dan cita rasa yang berbeda. Pilih destinasimu dan mulai menjelajah.</p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="kec-tabs" role="tablist" aria-label="Pilih Kecamatan">
+        <button class="kec-tab active" role="tab" aria-selected="true" aria-controls="kec-sukasada" id="tab-sukasada" onclick="switchKec('sukasada')">
+          <i class="fa-solid fa-mountain-sun"></i> Sukasada
+        </button>
+        <button class="kec-tab" role="tab" aria-selected="false" aria-controls="kec-gerokgak" id="tab-gerokgak" onclick="switchKec('gerokgak')">
+          <i class="fa-solid fa-water"></i> Gerokgak
+        </button>
+        <button class="kec-tab" role="tab" aria-selected="false" aria-controls="kec-buleleng" id="tab-buleleng" onclick="switchKec('buleleng')">
+          <i class="fa-solid fa-city"></i> Buleleng (Kota)
+        </button>
+        <button class="kec-tab" role="tab" aria-selected="false" aria-controls="kec-banjar" id="tab-banjar" onclick="switchKec('banjar')">
+          <i class="fa-solid fa-fire-flame-curved"></i> Banjar
+        </button>
+        <button class="kec-tab" role="tab" aria-selected="false" aria-controls="kec-busungbiu" id="tab-busungbiu" onclick="switchKec('busungbiu')">
+          <i class="fa-solid fa-tree"></i> Busungbiu
+        </button>
+      </div>
+
+      <!-- SUKASADA -->
+      <div class="kec-card active reveal" id="kec-sukasada" role="tabpanel" aria-labelledby="tab-sukasada">
+        <div class="kec-main-card" onclick="window.location.href='sukasada.html'" style="cursor:pointer;" title="Buka Detail Sukasada">
+          <div class="kec-visual bg-sukasada">
+            <div class="kec-visual-overlay"></div>
+            <div class="kec-icon-big" aria-hidden="true"><i class="fa-solid fa-mountain-sun"></i></div>
+            <div class="kec-visual-badge">Sukasada</div>
+            <div class="kec-visual-num" aria-hidden="true">01</div>
+          </div>
+          <div class="kec-info">
+            <h3 class="kec-info-title">Sukasada</h3>
+            <p class="kec-info-subtitle"><i class="fa-solid fa-location-dot"></i> Kabupaten Buleleng &middot; Bali Utara</p>
+            <ul class="kec-highlight-list">
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-fire"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Perang Api (Amuk-Amukan)</h5>
+                  <p>Ritual tradisi berbentuk perang api yang digelar di Desa Padangbulia sebagai bagian dari ritual adat penyucian desa dari roh jahat.</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-crow"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Megoak-goakan</h5>
+                  <p>Permainan tradisional khas Desa Panji yang terinspirasi dari strategi perang I Gusti Ngurah Panji Sakti, membentuk rantai manusia yang dinamis.</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-droplet"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Air Terjun Kembar Banyumala</h5>
+                  <p>Dua air terjun berdampingan di kaki Bukit Munduk yang menawarkan panorama alam tropis memukau dan kolam alami yang jernih.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="kec-sub-cards">
+          <div class="kec-sub-card" onclick="window.location.href='sukasada.html'" style="cursor:pointer;" title="Buka Detail Sukasada">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-fire"></i></div>
+            <h4>Perang Api</h4>
+            <p>Tradisi unik Padangbulia di mana warga saling melempar api sebagai simbol pembersihan dari roh jahat. Digelar setiap sasih tertentu dalam kalender Bali.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='sukasada.html'" style="cursor:pointer;" title="Buka Detail Sukasada">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-people-group"></i></div>
+            <h4>Megoak-goakan</h4>
+            <p>Permainan rakyat berbentuk rantai manusia menyerupai seekor gagak. Kini telah masuk dalam Warisan Budaya Tak Benda Nasional Indonesia.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='sukasada.html'" style="cursor:pointer;" title="Buka Detail Sukasada">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-water"></i></div>
+            <h4>Air Terjun Banyumala</h4>
+            <p>Air terjun kembar setinggi &plusmn;25 meter di Desa Wanagiri, Sukasada. Dikelilingi hutan tropis lebat dan kolam alami yang menyegarkan jiwa.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GEROKGAK -->
+      <div class="kec-card reveal" id="kec-gerokgak" role="tabpanel" aria-labelledby="tab-gerokgak">
+        <div class="kec-main-card" onclick="window.location.href='gerokgak.html'" style="cursor:pointer;" title="Buka Detail Gerokgak">
+          <div class="kec-visual bg-gerokgak">
+            <div class="kec-visual-overlay"></div>
+            <div class="kec-icon-big" aria-hidden="true"><i class="fa-solid fa-water"></i></div>
+            <div class="kec-visual-badge">Gerokgak</div>
+            <div class="kec-visual-num" aria-hidden="true">02</div>
+          </div>
+          <div class="kec-info">
+            <h3 class="kec-info-title">Gerokgak</h3>
+            <p class="kec-info-subtitle"><i class="fa-solid fa-location-dot"></i> Kabupaten Buleleng &middot; Bali Utara</p>
+            <ul class="kec-highlight-list">
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-yin-yang"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Konsep Nyegara Gunung</h5>
+                  <p>Filosofi keseimbangan antara laut dan gunung yang menjadi pedoman hidup masyarakat adat Pemuteran dalam tata kelola adat dan lingkungan hidup.</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-cloud-rain"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Gebug Ende</h5>
+                  <p>Tradisi pemanggil hujan berupa ritual adu pukul rotan antar pemuda di Desa Patas yang dipercaya mampu mendatangkan hujan di musim kemarau panjang.</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-seedling"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Sentra Jagung Bali Utara</h5>
+                  <p>Gerokgak adalah penghasil jagung terbesar di Kabupaten Buleleng. Ladang jagung tersebar luas di wilayah pesisir barat yang kering dan produktif.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="kec-sub-cards">
+          <div class="kec-sub-card" onclick="window.location.href='gerokgak.html'" style="cursor:pointer;" title="Buka Detail Gerokgak">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-yin-yang"></i></div>
+            <h4>Filosofi Nyegara Gunung</h4>
+            <p>Desa Pemuteran menerapkan konsep "Sad Kertih" yang mengharmonisasikan kehidupan laut (segara) dan pegunungan (gunung) dalam tata kelola adat dan lingkungan.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='gerokgak.html'" style="cursor:pointer;" title="Buka Detail Gerokgak">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-person-running"></i></div>
+            <h4>Ritual Gebug Ende</h4>
+            <p>Pemuda desa saling pukul menggunakan rotan sebagai persembahan kepada Dewa hujan. Diiringi gamelan beleganjur, simbol keberanian dan kesuburan alam.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='gerokgak.html'" style="cursor:pointer;" title="Buka Detail Gerokgak">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+            <h4>Ladang Jagung</h4>
+            <p>Jagung khas Gerokgak terkenal manis dan produktif. Digunakan dalam berbagai kuliner tradisional Bali Utara yang kaya rasa dan kearifan lokal.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BULELENG KOTA -->
+      <div class="kec-card reveal" id="kec-buleleng" role="tabpanel" aria-labelledby="tab-buleleng">
+        <div class="kec-main-card" onclick="window.location.href='buleleng.html'" style="cursor:pointer;" title="Buka Detail Buleleng Kota">
+          <div class="kec-visual bg-buleleng">
+            <div class="kec-visual-overlay"></div>
+            <div class="kec-icon-big" aria-hidden="true"><i class="fa-solid fa-city"></i></div>
+            <div class="kec-visual-badge">Kota Singaraja</div>
+            <div class="kec-visual-num" aria-hidden="true">03</div>
+          </div>
+          <div class="kec-info">
+            <h3 class="kec-info-title">Buleleng</h3>
+            <p class="kec-info-subtitle"><i class="fa-solid fa-location-dot"></i> Kota Singaraja &middot; Ibu Kota Kabupaten</p>
+            <ul class="kec-highlight-list">
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-handshake"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Nyama Selam &amp; Nyama Bali</h5>
+                  <p>Singaraja adalah simbol toleransi. "Nyama Selam" (saudara Muslim) dan "Nyama Bali" (saudara Hindu) hidup berdampingan harmonis selama ratusan tahun.</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-music"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Kesenian Gong Kebyar</h5>
+                  <p>Lahir di Buleleng awal abad ke-20. Musik gamelan dinamis dan penuh improvisasi ini kini menjadi identitas seni pertunjukan Bali yang diakui dunia internasional.</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-bowl-food"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Siobak Singaraja</h5>
+                  <p>Kuliner perpaduan Tionghoa-Bali berupa olahan daging dengan rempah-rempah lokal. Identik dengan kawasan Pecinan di Kota Singaraja dan identitas kuliner kota.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="kec-sub-cards">
+          <div class="kec-sub-card" onclick="window.location.href='buleleng.html'" style="cursor:pointer;" title="Buka Detail Buleleng Kota">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-mosque"></i></div>
+            <h4>Toleransi Beragama</h4>
+            <p>Kampung Arab, Kampung Bugis, dan Kampung Bali hidup berdampingan harmonis di Singaraja sejak era kolonial. Sebuah model pluralisme yang patut dicontoh bangsa.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='buleleng.html'" style="cursor:pointer;" title="Buka Detail Buleleng Kota">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-drum"></i></div>
+            <h4>Gong Kebyar</h4>
+            <p>Lahir sekitar 1915 di Jagaraga, Buleleng. Maestro I Mario mempopulerkan tari Kebyar ke dunia internasional. Kini menjadi simbol seni Bali yang paling dikenal.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='buleleng.html'" style="cursor:pointer;" title="Buka Detail Buleleng Kota">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-utensils"></i></div>
+            <h4>Siobak</h4>
+            <p>Kuliner warisan Tionghoa peranakan berupa irisan daging berkuah dengan bumbu rempah Bali yang kuat. Biasa disajikan dengan nasi putih atau lontong di Pecinan Singaraja.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BANJAR -->
+      <div class="kec-card reveal" id="kec-banjar" role="tabpanel" aria-labelledby="tab-banjar">
+        <div class="kec-main-card" onclick="window.location.href='banjar.html'" style="cursor:pointer;" title="Buka Detail Banjar">
+          <div class="kec-visual bg-banjar">
+            <div class="kec-visual-overlay"></div>
+            <div class="kec-icon-big" aria-hidden="true"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <div class="kec-visual-badge">Banjar</div>
+            <div class="kec-visual-num" aria-hidden="true">04</div>
+          </div>
+          <div class="kec-info">
+            <h3 class="kec-info-title">Banjar</h3>
+            <p class="kec-info-subtitle"><i class="fa-solid fa-location-dot"></i> Kabupaten Buleleng &middot; Bali Utara</p>
+            <ul class="kec-highlight-list">
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-fire-burner"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Nyakan Diwang</h5>
+                  <p>Tradisi memasak di luar rumah pada hari tertentu dalam kalender Bali. Bukan sekadar memasak, melainkan ritual kebersamaan komunal yang penuh makna.</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-leaf"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Kuliner Tum Bongkol</h5>
+                  <p>Olahan ikan atau daging dengan batang pisang muda (bongkol) dibungkus daun pisang. Dikukus perlahan menghasilkan cita rasa gurih dan aromatik yang khas.</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-hot-tub-person"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Banjar Hot Spring</h5>
+                  <p>Pemandian air panas alami bertingkat di tengah hutan tropis Banjar. Air sulfur dari celah gunung dipercaya bermanfaat bagi kesehatan dan relaksasi jiwa.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="kec-sub-cards">
+          <div class="kec-sub-card" onclick="window.location.href='banjar.html'" style="cursor:pointer;" title="Buka Detail Banjar">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-campfire"></i></div>
+            <h4>Nyakan Diwang</h4>
+            <p>Ritual memasak di halaman luar bermakna mendalam: mempererat persaudaraan, menjaga keseimbangan kosmis, dan menghormati alam sebagai sumber kehidupan.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='banjar.html'" style="cursor:pointer;" title="Buka Detail Banjar">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-fish"></i></div>
+            <h4>Tum Bongkol</h4>
+            <p>Perpaduan batang pisang muda dengan bumbu base genep Bali. Dibungkus dan dikukus dalam daun pisang segar menghasilkan rasa gurih, harum, dan unik.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='banjar.html'" style="cursor:pointer;" title="Buka Detail Banjar">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-hot-tub-person"></i></div>
+            <h4>Air Panas Banjar</h4>
+            <p>Destinasi relaksasi berupa kolam air panas alam di Desa Banjar. Mengandung mineral sulfur alami yang dipercaya bermanfaat untuk kesehatan kulit dan otot.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BUSUNGBIU -->
+      <div class="kec-card reveal" id="kec-busungbiu" role="tabpanel" aria-labelledby="tab-busungbiu">
+        <div class="kec-main-card" onclick="window.location.href='busungbiu.html'" style="cursor:pointer;" title="Buka Detail Busungbiu">
+          <div class="kec-visual bg-busungbiu">
+            <div class="kec-visual-overlay"></div>
+            <div class="kec-icon-big" aria-hidden="true"><i class="fa-solid fa-tree"></i></div>
+            <div class="kec-visual-badge">Busungbiu</div>
+            <div class="kec-visual-num" aria-hidden="true">05</div>
+          </div>
+          <div class="kec-info">
+            <h3 class="kec-info-title">Busungbiu</h3>
+            <p class="kec-info-subtitle"><i class="fa-solid fa-location-dot"></i> Kabupaten Buleleng &middot; Bali Utara</p>
+            <ul class="kec-highlight-list">
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-paw"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Meboros Kidang dengan Upih</h5>
+                  <p>Tradisi berburu rusa kijang menggunakan upih (pelepah pinang). Ritual komunal yang memiliki nilai sosial dan spiritual bagi masyarakat adat Busungbiu.</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-bug"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Gorengan Ores (Kuliner Ekstrem)</h5>
+                  <p>Ulat ores (larva pohon kelapa) yang digoreng hingga renyah. Kuliner ekstrem tradisional masyarakat setempat dengan kandungan protein dan lemak sehat yang tinggi.</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-leaf"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Kawasan Hutan &amp; Cengkeh</h5>
+                  <p>Busungbiu dikelilingi perkebunan cengkeh dan hutan tropis lebat. Desa Subuk terkenal dengan tradisi adat yang masih sangat terjaga keasliannya.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="kec-sub-cards">
+          <div class="kec-sub-card" onclick="window.location.href='busungbiu.html'" style="cursor:pointer;" title="Buka Detail Busungbiu">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-person-walking-luggage"></i></div>
+            <h4>Meboros Kidang</h4>
+            <p>Perburuan tradisional kijang menggunakan pelepah pinang (upih) yang dikeringkan. Kegiatan komunal dengan aturan adat yang ketat, digelar sekali setahun.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='busungbiu.html'" style="cursor:pointer;" title="Buka Detail Busungbiu">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-utensils"></i></div>
+            <h4>Gorengan Ores</h4>
+            <p>Ulat atau larva pohon kelapa digoreng dengan minyak dan bumbu sederhana. Makanan tradisional kaya protein ini menjadi camilan unik khas Busungbiu.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='busungbiu.html'" style="cursor:pointer;" title="Buka Detail Busungbiu">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-tree"></i></div>
+            <h4>Perkebunan Cengkeh</h4>
+            <p>Busungbiu adalah salah satu daerah penghasil cengkeh terbesar di Bali Utara. Aroma cengkeh yang harum menjadi bagian dari identitas dan ekonomi masyarakat lokal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section id="highlights" aria-label="Mengapa Buleleng">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">
+          <i class="fa-solid fa-star"></i>&nbsp; Mengapa Buleleng? &nbsp;<i class="fa-solid fa-star"></i>
+        </div>
+        <h2 class="section-title">Kekayaan yang <br><span style="color:var(--gold-dark);">Tak Ternilai</span></h2>
+        <p class="section-desc">Buleleng bukan sekadar destinasi wisata. Ia adalah warisan hidup yang terus bernafas lewat tradisi, rasa, dan kebersamaan warganya.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6 reveal reveal-delay-1">
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fa-solid fa-masks-theater"></i></div>
+            <h3>Tradisi Adat</h3>
+            <p>Dari Perang Api Sukasada hingga Gebug Ende Gerokgak &mdash; setiap desa menyimpan ritual sakral yang diturunkan lintas generasi tanpa henti selama ratusan tahun.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 reveal reveal-delay-2">
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fa-solid fa-bowl-food"></i></div>
+            <h3>Kuliner Otentik</h3>
+            <p>Siobak Singaraja, Tum Bongkol Banjar, hingga Gorengan Ores Busungbiu &mdash; cita rasa warisan leluhur yang tak ditemukan di tempat lain di Bali manapun.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 reveal reveal-delay-3">
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fa-solid fa-leaf"></i></div>
+            <h3>Alam Tropis</h3>
+            <p>Air terjun kembar Banyumala, kolam panas Banjar, pantai Pemuteran, hingga hutan cengkeh Busungbiu &mdash; panorama alam yang menyegarkan jiwa dan raga.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 reveal reveal-delay-4">
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+            <h3>Toleransi Unik</h3>
+            <p>Singaraja adalah laboratorium hidup kerukunan umat beragama. "Nyama Selam" dan "Nyama Bali" yang hidup harmonis menjadi kebanggaan dan teladan nasional.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ GAME SECTION -->
+  <section id="game" aria-label="Mini Game Tebak Budaya">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag" style="color:var(--gold-light);">
+          <i class="fa-solid fa-gamepad"></i>&nbsp; Uji Pengetahuanmu &nbsp;<i class="fa-solid fa-gamepad"></i>
+        </div>
+        <h2 class="section-title">Tebak Budaya <br><span style="color:var(--gold-light);">Buleleng</span></h2>
+        <p class="section-desc">Seberapa jauh kamu mengenal budaya Buleleng? Jawab 5 pertanyaan berikut dan buktikan pengetahuanmu sebagai penjelajah sejati!</p>
+      </div>
+
+      <div class="quiz-wrapper reveal">
+        <div class="quiz-box" id="quizBox">
+          <!-- Playing State -->
+          <div id="quizPlay">
+            <div class="quiz-header">
+              <span class="quiz-progress-label" id="quizProgressLabel">Pertanyaan 1 dari 5</span>
+              <span class="quiz-score-badge" id="quizScoreBadge">Skor: 0</span>
+            </div>
+            <div class="quiz-progress-bar-wrap">
+              <div class="quiz-progress-bar" id="quizProgressBar" style="width:0%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="quiz-q-num" id="quizQNum">Kecamatan: Sukasada &middot; Pertanyaan #1</div>
+            <div class="quiz-question" id="quizQuestion">Memuat pertanyaan...</div>
+            <div class="quiz-options" id="quizOptions" role="group" aria-label="Pilihan jawaban"></div>
+            <div class="quiz-feedback" id="quizFeedback" aria-live="polite"></div>
+            <button class="quiz-next-btn" id="quizNextBtn" aria-label="Lanjut ke pertanyaan berikutnya">
+              Pertanyaan Berikutnya &rarr;
+            </button>
+          </div>
+
+          <!-- Result State -->
+          <div class="quiz-result" id="quizResult" aria-live="polite">
+            <span class="result-trophy" id="resultTrophy">&#x1F3C6;</span>
+            <div class="result-stars" id="resultStars"></div>
+            <div class="result-score-display" id="resultScore">0/5</div>
+            <div class="result-score-label">Skor Akhirmu</div>
+            <div class="result-message" id="resultMessage">Luar Biasa!</div>
+            <p class="result-submessage" id="resultSubMessage">Kamu adalah penjelajah budaya Buleleng yang sejati!</p>
+            <button class="quiz-restart-btn" id="quizRestartBtn" onclick="restartQuiz()">
+              <i class="fa-solid fa-rotate-left"></i> Main Lagi
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">Budaya Buleleng</div>
+          <p class="footer-tagline">
+            Portal eksplorasi budaya, tradisi, dan kuliner otentik Kabupaten Buleleng, Bali Utara. Menjaga warisan leluhur agar terus hidup di hati generasi muda.
+          </p>
+          <div class="footer-social" aria-label="Media sosial">
+            <a href="https://github.com/" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://instagram.com/" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com/" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://facebook.com/" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-6">
+          <div class="footer-heading">Navigasi</div>
+          <ul class="footer-links">
+            <li><a href="#hero">Beranda</a></li>
+            <li><a href="#kecamatan">Kecamatan</a></li>
+            <li><a href="#highlights">Eksplorasi</a></li>
+            <li><a href="#game">Mini Game</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <div class="footer-heading">Kecamatan</div>
+          <ul class="footer-links">
+            <li><a href="#kecamatan" onclick="switchKec('sukasada'); return true;"><i class="fa-solid fa-mountain-sun fa-fw"></i> Sukasada</a></li>
+            <li><a href="#kecamatan" onclick="switchKec('gerokgak'); return true;"><i class="fa-solid fa-water fa-fw"></i> Gerokgak</a></li>
+            <li><a href="#kecamatan" onclick="switchKec('buleleng'); return true;"><i class="fa-solid fa-city fa-fw"></i> Buleleng Kota</a></li>
+            <li><a href="#kecamatan" onclick="switchKec('banjar'); return true;"><i class="fa-solid fa-fire-flame-curved fa-fw"></i> Banjar</a></li>
+            <li><a href="#kecamatan" onclick="switchKec('busungbiu'); return true;"><i class="fa-solid fa-tree fa-fw"></i> Busungbiu</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-heading">Sumber &amp; Referensi</div>
+          <ul class="footer-links">
+            <li><a href="https://bulelengkab.go.id" target="_blank" rel="noopener"><i class="fa-solid fa-globe fa-fw"></i> bulelengkab.go.id</a></li>
+            <li><a href="https://disbudpar.bulelengkab.go.id" target="_blank" rel="noopener"><i class="fa-solid fa-landmark fa-fw"></i> Disbudpar Buleleng</a></li>
+            <li><a href="https://prokomsetda.bulelengkab.go.id" target="_blank" rel="noopener"><i class="fa-solid fa-newspaper fa-fw"></i> Prokom Buleleng</a></li>
+            <li><a href="https://tatkala.co" target="_blank" rel="noopener"><i class="fa-solid fa-pen-nib fa-fw"></i> Tatkala.co</a></li>
+            <li><a href="https://ejournal.undiksha.ac.id" target="_blank" rel="noopener"><i class="fa-solid fa-book fa-fw"></i> E-Journal Undiksha</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2025 <strong>Eksplorasi Budaya Buleleng</strong> &middot; Dibuat dengan <span style="color:#e25555;">&#x2665;</span> untuk Bali Utara &middot;
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <div class="footer-made">
+          Sumber: Disbudpar, Tatkala.co, Undiksha, &amp; Rujukan Terpercaya
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
