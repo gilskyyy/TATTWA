@@ -142,6 +142,10 @@ body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--
 .bg-buleleng  { background: url('footage/buleleng/buleleng.png') center/cover no-repeat; }
 .bg-banjar    { background: url('footage/banjar/banjar.png') center/cover no-repeat; }
 .bg-busungbiu { background: url('footage/busungbiu/busungbiu.png') center/cover no-repeat; }
+.bg-kubutambahan { background: url('footage/kubutambahan/kubutambahan.jpg') center/cover no-repeat; }
+.bg-sawan     { background: url('footage/sawan/sawan.webp') center/cover no-repeat; }
+.bg-seririt   { background: url('footage/seririt/seririt.webp') center/cover no-repeat; }
+.bg-tejakula  { background: url('footage/tejakula/tejakula.avif') center/cover no-repeat; }
 
 /* ─── GAME SECTION & QUIZ SECTION ─── */
 #game, #quiz-section { padding: 6rem 0; background: linear-gradient(160deg, var(--primary) 0%, #2A0E18 50%, var(--primary) 100%); position: relative; overflow: hidden; }

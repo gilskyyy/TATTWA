@@ -122,14 +122,14 @@
     <div class="container">
       <div class="section-header reveal">
         <div class="section-tag">
-          <i class="fa-solid fa-location-dot"></i>&nbsp; Lima Kecamatan Pilihan &nbsp;<i class="fa-solid fa-location-dot"></i>
+          <i class="fa-solid fa-location-dot"></i>&nbsp; Sembilan Kecamatan Pilihan &nbsp;<i class="fa-solid fa-location-dot"></i>
         </div>
         <h2 class="section-title">Jelajah Kecamatan <br><span style="color:var(--gold-dark);">Buleleng</span></h2>
         <p class="section-desc">Setiap kecamatan menyimpan cerita, tradisi, dan cita rasa yang berbeda. Pilih destinasimu dan mulai menjelajah.</p>
       </div>
 
       <!-- Tab Buttons -->
-      <div class="kec-tabs" role="tablist" aria-label="Pilih Kecamatan">
+      <div class="kec-tabs" role="tablist" aria-label="Pilih Kecamatan" style="flex-wrap: wrap;">
         <button class="kec-tab active" role="tab" aria-selected="true" aria-controls="kec-sukasada" id="tab-sukasada" onclick="switchKec('sukasada')">
           <i class="fa-solid fa-mountain-sun"></i> Sukasada
         </button>
@@ -144,6 +144,18 @@
         </button>
         <button class="kec-tab" role="tab" aria-selected="false" aria-controls="kec-busungbiu" id="tab-busungbiu" onclick="switchKec('busungbiu')">
           <i class="fa-solid fa-tree"></i> Busungbiu
+        </button>
+        <button class="kec-tab" role="tab" aria-selected="false" aria-controls="kec-kubutambahan" id="tab-kubutambahan" onclick="switchKec('kubutambahan')">
+          <i class="fa-solid fa-gavel"></i> Kubutambahan
+        </button>
+        <button class="kec-tab" role="tab" aria-selected="false" aria-controls="kec-sawan" id="tab-sawan" onclick="switchKec('sawan')">
+          <i class="fa-solid fa-tractor"></i> Sawan
+        </button>
+        <button class="kec-tab" role="tab" aria-selected="false" aria-controls="kec-seririt" id="tab-seririt" onclick="switchKec('seririt')">
+          <i class="fa-solid fa-shop"></i> Seririt
+        </button>
+        <button class="kec-tab" role="tab" aria-selected="false" aria-controls="kec-tejakula" id="tab-tejakula" onclick="switchKec('tejakula')">
+          <i class="fa-solid fa-anchor"></i> Tejakula
         </button>
       </div>
 
@@ -426,6 +438,230 @@
           </div>
         </div>
       </div>
+
+      <!-- KUBUTAMBAHAN -->
+      <div class="kec-card reveal" id="kec-kubutambahan" role="tabpanel" aria-labelledby="tab-kubutambahan">
+        <div class="kec-main-card" onclick="window.location.href='kubutambahan.html'" style="cursor:pointer;" title="Buka Detail Kubutambahan">
+          <div class="kec-visual bg-kubutambahan">
+            <div class="kec-visual-overlay"></div>
+            <div class="kec-icon-big" aria-hidden="true"><i class="fa-solid fa-gavel"></i></div>
+            <div class="kec-visual-badge">Kubutambahan</div>
+            <div class="kec-visual-num" aria-hidden="true">06</div>
+          </div>
+          <div class="kec-info">
+            <h3 class="kec-info-title">Kubutambahan</h3>
+            <p class="kec-info-subtitle"><i class="fa-solid fa-location-dot"></i> Kabupaten Buleleng &middot; Bali Utara</p>
+            <ul class="kec-highlight-list">
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Tradisi Ngerebeg</h5>
+                  <p>Ritual sosial penolak bala berskala besar 5 tahun sekali untuk menetralisir energi negatif dan mencegah bencana alam.</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-hands-asl-interpreting"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Janger Kolok</h5>
+                  <p>Tari yang dipentaskan oleh komunitas tuli-bisu (kolok) di Desa Bengkala dengan ekspresi wajah yang kuat dan ritme visual.</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-utensils"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Kuliner Jaje Koteng</h5>
+                  <p>Jajanan legendaris kue ting-ting berbahan dasar kacang tanah pilihan dari Desa Tamblang dengan cita rasa historis Tionghoa.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="kec-sub-cards">
+          <div class="kec-sub-card" onclick="window.location.href='kubutambahan.html'" style="cursor:pointer;" title="Buka Detail Kubutambahan">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h4>Tradisi Ngerebeg</h4>
+            <p>Seluruh krama laki-laki wajib membawa tombak kayu, pusaka, atau keris (sudukan) untuk menetralisir wilayah desa.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='kubutambahan.html'" style="cursor:pointer;" title="Buka Detail Kubutambahan">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-hands-asl-interpreting"></i></div>
+            <h4>Janger Kolok</h4>
+            <p>Bengkala merupakan "Desa Tuli" yang terkenal di dunia, memiliki kesenian tari inklusif yang unik dan tangguh.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='kubutambahan.html'" style="cursor:pointer;" title="Buka Detail Kubutambahan">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-bowl-food"></i></div>
+            <h4>Kuliner &amp; Kriya</h4>
+            <p>Dodol Bali Asih, Nasi Moran Bungkil Biu, dan pusat anyaman piring Ingke tradisional berkualitas tinggi di Desa Depeha.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAWAN -->
+      <div class="kec-card reveal" id="kec-sawan" role="tabpanel" aria-labelledby="tab-sawan">
+        <div class="kec-main-card" onclick="window.location.href='sawan.html'" style="cursor:pointer;" title="Buka Detail Sawan">
+          <div class="kec-visual bg-sawan">
+            <div class="kec-visual-overlay"></div>
+            <div class="kec-icon-big" aria-hidden="true"><i class="fa-solid fa-tractor"></i></div>
+            <div class="kec-visual-badge">Sawan</div>
+            <div class="kec-visual-num" aria-hidden="true">07</div>
+          </div>
+          <div class="kec-info">
+            <h3 class="kec-info-title">Sawan</h3>
+            <p class="kec-info-subtitle"><i class="fa-solid fa-location-dot"></i> Kabupaten Buleleng &middot; Bali Utara</p>
+            <ul class="kec-highlight-list">
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-crow"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Tradisi Ngusaba Bukakak</h5>
+                  <p>Tradisi agraris paling megah di Sawan (Giri Emas & Sangsit) menggunakan sarana Bukakak dan babi guling unik untuk kesuburan tanah.</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-music"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Gong Kebyar Legendaris</h5>
+                  <p>Desa Jagaraga merupakan tempat lahirnya salah satu pakem Gong Kebyar Bali Utara yang sangat dinamis, cepat, dan menghentak.</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-fish"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Sudang Lepet Khas Sangsit</h5>
+                  <p>Kuliner legendaris paling terkenal berupa ikan asin khas yang dibuat dari ikan pari atau hiu dengan tekstur renyah gurih.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="kec-sub-cards">
+          <div class="kec-sub-card" onclick="window.location.href='sawan.html'" style="cursor:pointer;" title="Buka Detail Sawan">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-water"></i></div>
+            <h4>Tradisi Megeburan</h4>
+            <p>Tradisi perang air bercampur lumpur di mata air suci Taman Dari oleh pemuda dan pemudi desa adat pasca-sembahyang bersama.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='sawan.html'" style="cursor:pointer;" title="Buka Detail Sawan">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-masks-theater"></i></div>
+            <h4>Tari Baris Putus</h4>
+            <p>Tarian ritual sakral kuno dari Desa Sinabun yang ditarikan oleh krama desa berketurunan Arya Bang Pinatih.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='sawan.html'" style="cursor:pointer;" title="Buka Detail Sawan">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-leaf"></i></div>
+            <h4>Kuliner Desa Pedalaman</h4>
+            <p>Nasi Bayam Bungkulan dan Blayag Sudaji yang kaya akan paduan hasil pertanian persawahan dan kearifan lokal.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERIRIT -->
+      <div class="kec-card reveal" id="kec-seririt" role="tabpanel" aria-labelledby="tab-seririt">
+        <div class="kec-main-card" onclick="window.location.href='seririt.html'" style="cursor:pointer;" title="Buka Detail Seririt">
+          <div class="kec-visual bg-seririt">
+            <div class="kec-visual-overlay"></div>
+            <div class="kec-icon-big" aria-hidden="true"><i class="fa-solid fa-shop"></i></div>
+            <div class="kec-visual-badge">Seririt</div>
+            <div class="kec-visual-num" aria-hidden="true">08</div>
+          </div>
+          <div class="kec-info">
+            <h3 class="kec-info-title">Seririt</h3>
+            <p class="kec-info-subtitle"><i class="fa-solid fa-location-dot"></i> Kota Pelabuhan & Pusat Niaga &middot; Bali Utara</p>
+            <ul class="kec-highlight-list">
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-handshake"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Harmoni Komunal & Toleransi</h5>
+                  <p>Masyarakat heterogen di Seririt seperti Kampung Madura rukun dengan tradisi ngejot saat Idul Fitri dan Galungan.</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-shirt"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Kain Tenun Seririt</h5>
+                  <p>Pusat perdagangan kain endek lokal dengan pewarnaan berani dan motif modern yang berkembang sejak era kolonial.</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-utensils"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Kuliner Jajanan Malam</h5>
+                  <p>Pasir Senggol (Pasar Malam) terbesar di Buleleng Barat menyajikan Lawar Gengseng, Jukut Undis, dan Siobak Seririt.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="kec-sub-cards">
+          <div class="kec-sub-card" onclick="window.location.href='seririt.html'" style="cursor:pointer;" title="Buka Detail Seririt">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-fire"></i></div>
+            <h4>Tradisi Mabuu-buu</h4>
+            <p>Warga membuat obor massal dari daun kelapa kering berparade keliling perbatasan desa mengusir energi negatif di Desa Adat Lokapaksa.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='seririt.html'" style="cursor:pointer;" title="Buka Detail Seririt">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <h4>Balai Agung Tunggal</h4>
+            <p>Tiga desa bersaudara (Pengastulan, Bubunan, Sulanyah) menyembah satu manifestasi Tuhan di pura yang sama, terikat erat secara adat.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='seririt.html'" style="cursor:pointer;" title="Buka Detail Seririt">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-bowl-rice"></i></div>
+            <h4>Kuliner Pesisir</h4>
+            <p>Nasi Campur Legend Warung Meriki dan Jaje Bali Pesisir yang manis legit, menghentak lidah dengan rasa pedas dan gurih.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEJAKULA -->
+      <div class="kec-card reveal" id="kec-tejakula" role="tabpanel" aria-labelledby="tab-tejakula">
+        <div class="kec-main-card" onclick="window.location.href='tejakula.html'" style="cursor:pointer;" title="Buka Detail Tejakula">
+          <div class="kec-visual bg-tejakula">
+            <div class="kec-visual-overlay"></div>
+            <div class="kec-icon-big" aria-hidden="true"><i class="fa-solid fa-anchor"></i></div>
+            <div class="kec-visual-badge">Tejakula</div>
+            <div class="kec-visual-num" aria-hidden="true">09</div>
+          </div>
+          <div class="kec-info">
+            <h3 class="kec-info-title">Tejakula</h3>
+            <p class="kec-info-subtitle"><i class="fa-solid fa-location-dot"></i> Desa Bali Mula &middot; Bali Utara</p>
+            <ul class="kec-highlight-list">
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-masks-theater"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Wayang Wong Sakral (UNESCO)</h5>
+                  <p>Pertunjukan teater tari massal diakui UNESCO dengan topeng kuno peninggalan abad ke-16 yang disakralkan di pura.</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-users"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Sistem Sosial Tanpa Kasta</h5>
+                  <p>Masyarakat Desa Julah dan Sembiran menolak sistem kasta dan mengedepankan kesetaraan berdasarkan senioritas pernikahan (Ulu Apad).</p>
+                </div>
+              </li>
+              <li class="kec-highlight-item">
+                <div class="kec-highlight-icon"><i class="fa-solid fa-plate-wheat"></i></div>
+                <div class="kec-highlight-text">
+                  <h5>Kuliner Garam & Laut</h5>
+                  <p>Produksi Garam Tejakula otentik mendukung kuliner khas seperti Bubur Mengguh, Tipat Blayag Bondalem, dan Tum Be Pasih.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="kec-sub-cards">
+          <div class="kec-sub-card" onclick="window.location.href='tejakula.html'" style="cursor:pointer;" title="Buka Detail Tejakula">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-people-arrows"></i></div>
+            <h4>Tradisi Nasi Blabar</h4>
+            <p>Makan bersama di pinggir jalan raya sepanjang ratusan meter beralaskan daun pisang di Desa Pacung sehari sebelum Nyepi Adat.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='tejakula.html'" style="cursor:pointer;" title="Buka Detail Tejakula">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-music"></i></div>
+            <h4>Musik Purba</h4>
+            <p>Gamelan Saron kuno dan Genggong Bambu yang menghasilkan suara alat musik tiup khas menyerupai katak untuk hiburan rakyat.</p>
+          </div>
+          <div class="kec-sub-card" onclick="window.location.href='tejakula.html'" style="cursor:pointer;" title="Buka Detail Tejakula">
+            <div class="kec-sub-card-icon"><i class="fa-solid fa-ice-cream"></i></div>
+            <h4>Jaja Cerorot</h4>
+            <p>Kue manis kenyal dikukus di dalam anyaman daun lontar berbentuk kerucut spiral dengan cara makan ditekan dari bawah.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -561,6 +797,10 @@
             <li><a href="#kecamatan" onclick="switchKec('buleleng'); return true;"><i class="fa-solid fa-city fa-fw"></i> Buleleng Kota</a></li>
             <li><a href="#kecamatan" onclick="switchKec('banjar'); return true;"><i class="fa-solid fa-fire-flame-curved fa-fw"></i> Banjar</a></li>
             <li><a href="#kecamatan" onclick="switchKec('busungbiu'); return true;"><i class="fa-solid fa-tree fa-fw"></i> Busungbiu</a></li>
+            <li><a href="#kecamatan" onclick="switchKec('kubutambahan'); return true;"><i class="fa-solid fa-gavel fa-fw"></i> Kubutambahan</a></li>
+            <li><a href="#kecamatan" onclick="switchKec('sawan'); return true;"><i class="fa-solid fa-tractor fa-fw"></i> Sawan</a></li>
+            <li><a href="#kecamatan" onclick="switchKec('seririt'); return true;"><i class="fa-solid fa-shop fa-fw"></i> Seririt</a></li>
+            <li><a href="#kecamatan" onclick="switchKec('tejakula'); return true;"><i class="fa-solid fa-anchor fa-fw"></i> Tejakula</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6">
