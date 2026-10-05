@@ -399,3 +399,89 @@ if (quizNextBtn) {
   quizNextBtn.addEventListener('click', nextQuestion);
   initQuiz();
 }
+
+/* ===================================================
+   FAQ & TESTIMONI - GOOGLE SHEETS INTEGRATION
+   =================================================== */
+
+// Konfigurasi Google Sheets
+// Masukkan URL Google Apps Script Anda (Setelah melakukan deploy script)
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxaoXwfdhFwKPlFsq9VInxtWGlVJ1RRTuB8iCo7wroXu9n6UBCWgydq34EVLXzse8VfPA/exec';
+
+// Inisialisasi saat DOM dimuat
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.getElementById('feedbackForm')) {
+    setupFeedbackForm();
+  }
+});
+
+
+
+/* ─── FORM SUBMIT UNIFIED FEEDBACK ─── */
+function setupFeedbackForm() {
+  const form = document.getElementById('feedbackForm');
+  const alertBox = document.getElementById('feedbackAlert');
+  const btnSubmit = document.getElementById('btnSubmitFeedback');
+  
+  if(!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    if(APPS_SCRIPT_URL === 'MASUKKAN_URL_APPS_SCRIPT_ANDA_DI_SINI' || APPS_SCRIPT_URL.includes('AKfycbwOXAy9PSxI3ZoClPvz00IzuCPb0qzLlBUPZnee5oLTPYQshWp3AsHNq24FMn_r6LaE')) {
+      showAlert('Sistem belum diperbarui. Harap perbarui Google Apps Script Anda (lihat panduan).', 'warning');
+      return;
+    }
+
+    const nama = document.getElementById('namaFeedback').value;
+    const pesan = document.getElementById('pesanFeedback').value;
+    const selectedRating = document.querySelector('input[name="ratingScale"]:checked');
+    
+    if (!selectedRating) {
+      showAlert('Silakan pilih skala penilaian 1 hingga 5.', 'warning');
+      return;
+    }
+    
+    const nilaiRating = selectedRating.value;
+    
+    btnSubmit.disabled = true;
+    btnSubmit.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Mengirim...';
+    
+    // Siapkan data formData
+    const formData = new FormData();
+    formData.append('Type', 'Feedback');
+    formData.append('Nama', nama);
+    formData.append('Nilai', nilaiRating);
+    formData.append('Pesan', pesan);
+
+    fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if(response.ok) {
+        showAlert('<i class="fa-solid fa-check"></i> Terima kasih! Penilaian & pesan Anda telah berhasil dikirim.', 'success');
+        form.reset();
+      } else {
+        throw new Error('Network response was not ok.');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      showAlert('Gagal mengirim pesan. Silakan coba lagi nanti.', 'danger');
+    })
+    .finally(() => {
+      btnSubmit.disabled = false;
+      btnSubmit.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Kirim Penilaian & Pesan';
+    });
+  });
+
+  function showAlert(msg, type) {
+    alertBox.className = `alert alert-${type} p-3 fw-medium`;
+    alertBox.innerHTML = msg;
+    alertBox.style.display = 'block';
+    setTimeout(() => { alertBox.style.display = 'none'; }, 5000);
+  }
+}
+
+

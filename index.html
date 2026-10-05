@@ -37,6 +37,7 @@
           <li><a href="#kecamatan" class="nav-link-item">Kecamatan</a></li>
           <li><a href="#highlights" class="nav-link-item">Eksplorasi</a></li>
           <li><a href="#game" class="nav-link-item">Mini Game</a></li>
+          <li><a href="#faq-testimoni" class="nav-link-item">Penilaian & Pesan</a></li>
           <li><a href="#footer" class="nav-link-item">Tentang</a></li>
           <li>
             <a href="#game" class="btn-primary-custom ms-2" style="font-size:0.85rem; padding:0.5rem 1.2rem;">
@@ -50,6 +51,7 @@
         <a href="#kecamatan" class="nav-link-item" onclick="closeMobileMenu(event)">Kecamatan</a>
         <a href="#highlights" class="nav-link-item" onclick="closeMobileMenu(event)">Eksplorasi</a>
         <a href="#game" class="nav-link-item" onclick="closeMobileMenu(event)">Mini Game</a>
+        <a href="#faq-testimoni" class="nav-link-item" onclick="closeMobileMenu(event)">Penilaian & Pesan</a>
         <a href="#footer" class="nav-link-item" onclick="closeMobileMenu(event)">Tentang</a>
       </div>
     </div>
@@ -753,6 +755,82 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- RATING & TESTIMONI SECTION -->
+  <section id="faq-testimoni" aria-label="Penilaian dan Kesan Pesan">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">
+          <i class="fa-solid fa-comments"></i>&nbsp; Informasi & Masukan &nbsp;<i class="fa-solid fa-comments"></i>
+        </div>
+        <h2 class="section-title">Penilaian & <span class="accent">Kesan Pesan</span></h2>
+        <p class="section-desc">Bantu kami menjadi lebih baik dengan memberikan penilaian skala kegunaan website ini, serta tinggalkan kesan dan pesan Anda!</p>
+      </div>
+
+      <div class="row g-4 mt-2 justify-content-center">
+        <!-- Unified Feedback Form Section -->
+        <div class="col-lg-8 reveal reveal-delay-1">
+          <div class="p-4 p-md-5" style="background: rgba(201,168,76,0.05); border-radius: var(--radius-lg); border: 1px dashed rgba(201,168,76,0.4);">
+            <p class="mb-4 text-center text-muted">Beri tahu kami pengalaman Anda menjelajahi website Budaya Buleleng. Penilaian dan masukan Anda sangat berarti bagi kami!</p>
+            
+            <form id="feedbackForm">
+              <div class="mb-4">
+                <label for="namaFeedback" class="form-label fw-bold">Nama Anda <span class="text-danger">*</span></label>
+                <input type="text" class="form-control form-control-lg" id="namaFeedback" placeholder="Masukkan nama Anda" required>
+              </div>
+              
+              <div class="mb-4">
+                <label class="form-label fw-bold">Seberapa berguna website ini menurut Anda? (Pilih Skala 1-5) <span class="text-danger">*</span></label>
+                <div class="rating-scale-group d-flex flex-wrap gap-2 mt-2">
+                  <input type="radio" name="ratingScale" id="rating1" value="1 - Tidak berguna" class="d-none" required>
+                  <label class="rating-card" for="rating1">
+                    <div class="rating-num">1</div>
+                    <div class="rating-text">Tidak berguna</div>
+                  </label>
+                  
+                  <input type="radio" name="ratingScale" id="rating2" value="2 - Kurang berguna" class="d-none">
+                  <label class="rating-card" for="rating2">
+                    <div class="rating-num">2</div>
+                    <div class="rating-text">Kurang berguna</div>
+                  </label>
+                  
+                  <input type="radio" name="ratingScale" id="rating3" value="3 - Cukup berguna" class="d-none">
+                  <label class="rating-card" for="rating3">
+                    <div class="rating-num">3</div>
+                    <div class="rating-text">Cukup berguna</div>
+                  </label>
+                  
+                  <input type="radio" name="ratingScale" id="rating4" value="4 - Berguna" class="d-none">
+                  <label class="rating-card" for="rating4">
+                    <div class="rating-num">4</div>
+                    <div class="rating-text">Berguna</div>
+                  </label>
+                  
+                  <input type="radio" name="ratingScale" id="rating5" value="5 - Sangat berguna" class="d-none">
+                  <label class="rating-card" for="rating5">
+                    <div class="rating-num">5</div>
+                    <div class="rating-text">Sangat berguna</div>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="mb-4">
+                <label for="pesanFeedback" class="form-label fw-bold">Kesan & Pesan (Opsional)</label>
+                <textarea class="form-control" id="pesanFeedback" rows="4" placeholder="Tuliskan kesan, kritik, atau saran Anda di sini..."></textarea>
+              </div>
+              
+              <button type="submit" class="btn-primary-custom w-100" id="btnSubmitFeedback" style="padding: 1rem;">
+                <i class="fa-solid fa-paper-plane"></i> Kirim Penilaian & Pesan
+              </button>
+            </form>
+            <div id="feedbackAlert" class="mt-3" style="display:none; font-size: 0.9rem;"></div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   </section>
 
